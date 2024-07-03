@@ -13,7 +13,7 @@ router.get('/blogs', async (req, res) => {
         if(!item) continue;
         try {
             const response = await fetch(
-                `http://localhost:3000/api/blog/${item.ipfs_pin_hash}`,
+                `https://block-blog-backend.onrender.com/api/blog/${item.ipfs_pin_hash}`,
             );
             if (response.ok) {
                 const json = await response.json();
